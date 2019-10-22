@@ -6,7 +6,12 @@ Pedro Tavares de Carvalho
 
 The main focus of this assignment is to build a Tf-Idf based search engine for documents.
 
-Usage
+Makefile
 ------
 
-You should put the files that you want as documents in the `data` folder.
+The makefile contains two rules:
+
+- `init`
+    Init initializes the repositorys with the dependencies that are needed.
+- `test`
+    Test tests the whole package with coverage reports using pytest
