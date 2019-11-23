@@ -1,7 +1,7 @@
 import argparse
 import logging
 
-from search_engine.inverted_index import inverted_index
+from search_engine.tf_idf_ranking import tf_idf_ranking
 from search_engine.input import get_file_paths
 
 
@@ -17,12 +17,6 @@ def main():
         type=str
     )
 
-    parser.add_argument(
-        '-f',
-        '--file',
-        help='File path containing the query.',
-        type=str
-    )
 
     parser.add_argument(
         '--folder',
@@ -40,15 +34,15 @@ def main():
     )
     args = parser.parse_args()
 
-    index = inverted_index(get_file_paths(args.folder))
+    index = tf_idf_ranking(get_file_paths(args.folder))
 
-    if args.file and args.query:
+    if  args.query:
         raise SyntaxError("Should not make CLI and file query")
         return
     
     if args.query:
-        for f in index.query(args.query, args.number):
-            print(f)
+        for i, f in enumerate(index.query(args.query, args.number)):
+            print(f'{i + 1}: {f}')
 
         
 
