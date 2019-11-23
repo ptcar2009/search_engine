@@ -1,6 +1,8 @@
 Programming assignment for PDS 2
 =======
 
+### Pedro Tavares de Carvalho - 2017014499
+
 This module attempts to create a `Tf-Idf` oriented document search engine. This concept bases itself on creating word representations in relation to documents, using the frequency of those words as determinant factors in the norm of the vectors used in the representation.
 
 Tf-Idf stands for Term Frequncy - Inverse Document Frequency. Each of these is a number, that represents some sense of a relation between the document and word in question. The term frequency can be written as
@@ -112,7 +114,9 @@ after running
 make init
 ```
 
+## Github link
 
+The github containing this project can be found at [this link](https://github.com/ptcar2009/search_engine).
 
 
 
